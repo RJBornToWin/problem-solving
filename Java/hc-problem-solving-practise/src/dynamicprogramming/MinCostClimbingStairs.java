@@ -38,3 +38,48 @@ class MinCostClimbingStairsSolution {
         return Math.min(cache1, cache2) + cost[n];
     }
 }
+
+class SolutionUS {
+    public int findCircleNum(int[][] isConnected) {
+        int[] v = new int[isConnected.length];
+        for (int r=0; r<=isConnected.length-1; r++) {
+         v[r] = r;    
+        }
+        
+        for (int r=0; r<=isConnected.length-1; r++) {
+            for(int c=0; c<=isConnected.length-1; c++) {
+                if (r!=c) {
+                    if (isConnected[r][c] == 1 && !(r>=c)) {
+                        
+                        if (v[c] == c) {
+                            System.out.println(r + ":" + c + ",,");
+                            v[c] = r;
+                        }
+                        else {
+                             System.out.println(r + ":" + c+",");
+                             if (v[r] != v[c]) {
+                                 v[v[r]] = c;
+                                 v[r] = c;
+                             }
+                        }
+                            
+                    }
+                }
+            }
+        }
+        System.out.println("");
+        //List<Integer> values = Arrays.asList(new Integer[](v));
+        //System.out.println("Values: " + v);
+        
+        int count = 0;
+        for (int i=0; i < v.length; i++) {
+            System.out.println(v[i] + "|--");
+            if (v[i] == i) {
+                count++;
+            }
+        }
+        
+        return count;
+        
+    }
+}
