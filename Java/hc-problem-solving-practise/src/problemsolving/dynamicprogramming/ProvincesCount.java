@@ -1,4 +1,4 @@
-package dynamicprogramming;
+package problemsolving.dynamicprogramming;
 
 public class ProvincesCount {
 

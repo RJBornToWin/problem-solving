@@ -1,4 +1,4 @@
-package org.hc.trucktour;
+package problemsolving.hr.assessments;
 
 
 import java.io.*;
@@ -15,7 +15,7 @@ import static java.util.stream.Collectors.toList;
 
 
 
-class Result {
+class TruckTourStartCalculator {
 
     /*
      * Complete the 'truckTour' function below.
@@ -57,11 +57,11 @@ class Result {
 
 }
 
-public class Solution {
+public class TruckTourStartCalculatorSolutionSolution {
     public static void main(String[] args) throws IOException {
         List<List<Integer>> petrolpumps = new ArrayList<>();
 
-        int result = Result.truckTour(petrolpumps);
+        int result = TruckTourStartCalculator.truckTour(petrolpumps);
 
         System.out.print(result);
     }

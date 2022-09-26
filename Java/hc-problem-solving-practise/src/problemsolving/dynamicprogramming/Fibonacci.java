@@ -1,18 +1,18 @@
-package dynamicprogramming;
+package problemsolving.dynamicprogramming;
 
 public class Fibonacci {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// 1 1 2 3 5 8 13...
-		Solution s = new Solution();
+		FibonacciSolution s = new FibonacciSolution();
 		System.out.println(s.fib(6));
-		System.out.println(s.fibCached(6));
+		System.out.println(s.fibCached(6)); // 8
 	}
 
 }
 
-class Solution {
+class FibonacciSolution {
     int[] cache = new int[30];
     public int fibCached(int n) {
         if (n==0 || n==1)
